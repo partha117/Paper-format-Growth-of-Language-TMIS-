@@ -1,0 +1,27 @@
+\begin{table}
+\centering
+
+\caption{Coverage model statistics from the perspective of Stack Overflow}
+\begin{threeparttable}
+\begin{tabular}{|l|l|l|l|}
+\hline
+       & Swift & Go & Rust \\ \hline
+    Adjusted $R^2$   &0.443  & 0.813 &0.924  \\ \hline
+    Optimism-reduced $R^2$ & 0.441 &0.802  &0.919 \\ \hline
+    Budgeted Degree of freedom & 8 & 8  &8 \\ \hline
+%    Degree of freedom spent   & 3 & 4 & 3 \\ \hline
+    Open Issue $\chi^2$             & 10 \tnote{*} & 53\tnote{**} & 10\tnote{*}\\ \hline
+    Closed Issue $\chi^2$           & 59 \tnote{*}& 251\tnote{**} & 716\tnote{**} \\ \hline
+    Ratio of Open Issue $\chi^2$    & 10 \tnote{*} & 63\tnote{**} & 21\tnote{**}\\ \hline
+\end{tabular}
+
+
+\begin{tablenotes}
+\item [*] p\textless 0.1 
+\item [**] p\textless 0.001
+\end{tablenotes}
+\end{threeparttable}
+\label{table:issue_question relationship}
+\end{table}
+
+

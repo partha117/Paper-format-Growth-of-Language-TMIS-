@@ -1,0 +1,35 @@
+\iffalse
+\begin{table}
+\centering
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+        Go & Rust &  p value \\ \hline
+        Accepted Answer Interval  &  First Answer Interval     &  < 0.01 \\ \hline
+        First Answer Interval     &  Accepted Answer Interval  &  < 0.01  \\ \hline
+\end{tabular}
+%}
+\caption{Mann-Whitney U test result for the comparison of accepted answer time and first answer time of Go and Rust language}
+\label{table:accepted-first u value}
+\end{table}
+\fi
+
+
+
+\begin{table}
+\caption{Mann-Whitney U test result for the comparison of accepted answer time and first answer time of Go and Rust language}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\multirow{2}{*}{Test Subject}                                   & \multicolumn{2}{c|}{Language}                                     & \multicolumn{1}{l|}{\multirow{2}{*}{p value}} \\ \cline{2-3}
+                                                                & \multicolumn{1}{l|}{Language 1} & \multicolumn{1}{l|}{Language 2} & \multicolumn{1}{l|}{}                         \\ \hline
+\multirow{3}{*}{First Answer Interval}                          & Go                              & Swift                           &     0.158                                          \\ \cline{2-4} 
+                                                                & Go                              & Rust                            &    \textless 0.01                                           \\ \cline{2-4} 
+                                                                & Swift                           & Rust                            &      \textless 0.01                                         \\ \hline
+\multicolumn{1}{|c|}{\multirow{3}{*}{Accepted Answer Interval}} & Go                              & Swift                           &        0.389                                       \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                                          & Swift                           & Rust                            &         \textless 0.1                                      \\ \cline{2-4} 
+\multicolumn{1}{|c|}{}                                          & Go                           & Rust                            &           \textless 0.01                                    \\ \hline
+\end{tabular}
+
+\label{table:accepted-first u value}
+\end{table}
+

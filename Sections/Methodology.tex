@@ -1,0 +1,36 @@
+\section{Methodology}
+\label{sec:dataset preparation}
+The following steps are followed to develop the dataset for this study.
+
+\begin{enumerate}
+    \item \textbf{Download Stack Overflow dataset:} For our analysis, we have collected the December 2017 Stack Overflow data dump which is available in the Stack Exchange data dump. In Stack Overflow schema, both question and answer are considered as \emph{post}. The post table of the data dump contains all the information of a post like a title, tags, body, creation date, view count, type (question or answer) and accepted answer identifier. An answer is accepted if the questioner marks that answer as accepted. Our dataset includes 4,17,82,536 questions and answers posted over some time of over 9 years from August 2008 to December 2017 by 39,40,962 users of Stack Overflow. Among these posts 1,63,89,567 (39\%) are questions and 2,52,97,926 (61\%) are answers of which 87,04,031 (21\%) are marked as accepted answers.
+    
+ 
+    \item \textbf{Develop tag set:} To compare the growth of languages, we have to separate the posts by language. Posts on Stack Overflow can be about any topic, we need a way to identify posts by language. Every Stack Overflow post is associated with at least one tag. We consider a post is associated with one of the new languages if that contain at least one tag of tag set of that respective language. We have created an initial set of tag $\uptau_0$ for each language by manually inspecting the tag table of Stack Overflow schema. Next, we go through the Stack Overflow dataset $\mathcal{S}$ and extract questions $\rho$ whose tags contain a tag from  $\uptau_0$. Third, we extract tags of the posts in $\uprho$ to form the set of candidate concurrency tags $\uptau$. Now we have a set of tag $\uprho$ for each language which includes all tags of that language.However, set $\uprho$ may include tags which may be irrelevant to new languages. So following the  approach of Rosen et al.\citep{Rosen2015} we have  used two heuristics $\alpha$ and $\beta$ to find the the significantly relevant tags for each language. 
+    
+    \begin{equation}
+        \alpha = \dfrac{number \ of \ posts \ with \ tag \ t \ in \ \uprho}{number \ of \ posts \ with \ tag \ t \ in \ \mathcal{S}}
+    \end{equation}
+    \begin{equation}
+         \beta = \dfrac{number \ of \ posts \ with \ tag \ t \ in \ \uprho}{number \ of \ posts \ in \ \uprho}
+    \end{equation}
+
+    We have experimented with a broad range of $\alpha$ and $\beta$  and found that $\alpha = 0.01$ and $\beta=0.01$ provides a significantly relevant set of tags. Relevant tags selected for this study is presented in appendix ~\ref{appendix:tagrelevance}.
+
+% To compare the growth of languages, we have to separate the posts by language. Every Stack Overflow post is associated with at least one tag. We consider a post is associated with one of the new languages if that contain at least one tag of tag set of that respective language. To develop a set of tag for each language, we have used keywords to search in the tag table and then by manual inspection we have identified relevant tags for each language. 
+    
+    \item \textbf{Extract posts of new languages:} Using the tag set prepared in the previous step, we have separated the posts by language. We have 4,37,880 Swift posts, consisting of 1,88,065 (43\%) questions and 2,49,815 (57\%) answers of which 94,310 (21.6\%) are accepted answers. We have 72,843  Go posts, consisting of 30,286 (41.6\%) questions and 42,557 (58.4\%) answers of which 19,178 (26.3\%)  are accepted answers. We have 18,311 Rust posts, consisting of 8,083 (44.1\%) questions and 10,228 (55.9\%) answers of which 5,964 (32.6\%) are accepted answers. 
+
+     \item \textbf{Data extraction from GitHub:} GitHub provides access to data of public repositories and users through API\footnote{https://developer.github.com/v3/}. The new languages have their official repository in GitHub. We have collected the creation date and closing date of the issues from the official repositories of these new languages. GitHub issues have two states `open' and `closed.' As soon as an issue is taken care of, it changes its state from `open' to `closed.' Along with the frequency of issues, we have also collected the states of issues. Besides, we have collected the number of users and repositories of each new language.
+\end{enumerate}
+
+\iffalse
+
+ \item \textbf{Preprocessing of posts for topic modeling:} To avoid noise, we preprocess the post before topic modeling\citep{Barua2012}. First, all the codes enclosed in <code> tags, HTML tags, and url are removed. Second, the Porter stemming algorithm\citep{Porter1997} is applied to convert the words into their base form. Third, all the articles and stop words are removed. Now, the posts are ready for topic modeling. We have used MALLET's Latent Dirichlet Allocation (LDA)\citep{Blei2003} to infer topics automatically.
+ 
+ 
+ 
+ Stack Overflow publishes its data periodically. We have collected the Stack Overflow data dump in  October 2018. There are total 38485046 posts(both question and answer) in that dump. Stack Overflow posts are associated with tags. Though the tags are added by the users, in the moderation process correct tags will be associated with that post. To separate the posts by languages, we rely on tags. We carefully curated a tag set for each of these languages based on keywords, frameworks etc. from the tag table of Stack Overflow.
+
+GitHub provides access to public data of repository and user through API\footnote{\url{https://developer.github.com/v3/}}. By using that API we have collected information about the official Go, Rust and Swift repository, the number of users and number of repositories of each language.
+\fi

@@ -1,0 +1,106 @@
+\documentclass[acmsmall]{acmart}
+
+
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{threeparttable}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{mathtools,cuted}
+\usepackage{tablefootnote}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{longfbox}
+\usepackage{makecell}
+\usepackage{longtable}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\topicquote}[1]{\\ \hspace*{2em}\emph{``#1"}}
+
+
+\title{
+Understanding the Growth and Challenges of New Programming Languages: An Empirical Analysis
+}
+
+
+% \author{Partha Chakraborty}
+% \affiliation{%
+%   \institution{Bangladesh University of Engineering and Technology}
+%   \department{Department of Computer Science and Engineering}
+%   \city{Dhaka}
+%   \country{Bangladesh}
+% }
+% \email{shuvopartho@gmail.com}
+
+% \author{Rifat Shahriyar}
+% \affiliation{%
+%   \institution{Bangladesh University of Engineering and Technology}
+%   \department{Department of Computer Science and Engineering}
+%   \city{Dhaka}
+%   \country{Bangladesh}
+% }
+% \email{rifat@cse.buet.ac.bd}
+
+% \author{Anindya Iqbal}
+% \affiliation{%
+%   \institution{Bangladesh University of Engineering and Technology}
+%   \department{Department of Computer Science and Engineering}
+%   \city{Dhaka}
+%   \country{Bangladesh}
+% }
+% \email{anindya@cse.buet.ac.bd}
+
+
+
+
+\acmJournal{TMIS}
+\citestyle{acmauthoryear}
+\begin{document}
+
+\newcommand{\rcomment}[1] { \textcolor{red}{#1}}
+\newcommand{\boxtext}[1]{\begin{longfbox}#1\end{longfbox}}
+\newcommand{\eqrow}[1]{
+    \vbox{
+        \begin{equation}
+            \nonumber
+            \begin{split}
+                #1 \hspace{10em}
+            \end{split}
+        \end{equation}
+        } \\
+     }
+% \thispagestyle{empty}
+% \pagestyle{empty}
+
+\begin{abstract}
+New programming languages (e.g., Swift, Go, Rust, etc.) are being introduced to provide a better opportunity to developers by matching the requirements of new platforms and application contexts. In the beginning, a programming language is likely to have constraints of resources that encourage the developers to seek help from experienced peers active in Question-answering (QA) sites such as Stack Overflow (SO). In this study, we would like to analyze the discussions on three popular new languages that are introduced after the inception of SO (2008) and also match those with the relevant activities in GitHub whenever appropriate. The relevant posts in SO present an interesting representation of the growth/evolution of that language and also, expose the demands of the relevant development community. The major findings of the study are: (i) the difficult topics of new languages are quite common, (ii) the time when adequate resources are expected to be available vary from language to language, (iii) the unanswered question ratio increases regardless of the age of the language, (iv) a new language is benefited from its predecessor language and (v) there is a relationship between developers' activity pattern and growth of the language. The study outcome is likely to help the owner/sponsor of these languages to design better features and documentation and software developers or students to prepare themselves to work on these languages in an informed way.
+\end{abstract}
+\maketitle
+
+\input{Sections/Introduction}
+\input{Sections/RelatedWorks}
+\input{Sections/ResearchSetting}
+\input{Sections/Methodology}
+\input{Sections/Results}
+\input{Sections/Implication}
+\input{Sections/Validity}
+\input{Sections/Conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+
+\bibliography{bibliography}
+
+\pagebreak
+\appendix
+\section{Tags of new languages}
+\label{appendix:tagrelevance}
+\input{Tables/TagRelevance}
+    
+\end{document}

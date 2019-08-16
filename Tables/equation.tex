@@ -1,0 +1,12 @@
+\begin{table*}[htbp]
+  \centering
+  \begin{tabular}{l}
+    \eqrow{Q=\big\{All\quad Questions\quad of\quad a\quad month  \big\}}
+    \eqrow{A=\big\{All\quad answers\quad of\quad questions\quad in\quad Q\quad where \quad creation\quad date\quad is\quad within\quad 24 \quad hour\quad of\quad Q \big\} }
+    \eqrow{C=\big\{All\quad comments\quad of\quad Q\quad within\quad 24\quad hour\quad of\quad Q\big\} \cup  \big\{All\quad comments\quad of\quad A\quad within\quad 24\quad hour\quad of\quad A\big\}}
+    \eqrow{AA=\big\{All\quad accepted\quad answers\quad of\quad Q\quad where creation\quad date\quad is\quad within\quad 24\quad hour\quad of\quad Q \big\}}
+    \eqrow{T(x)=Creation\quad date\quad time\quad of\quad item\quad x }
+    \eqrow{{Interaction \quad score=}\left[\dfrac{ \sum_{Q_i\in Q}Q_i+ \sum_{A_i\in A}A_i+\sum_{C_i\in C}C_i}{\sum_{Q_i\in Q}Q_i}\right] \hspace{10em}}
+    \eqrow{{Score=}\left[\dfrac{ \sum_{Q_i\in Q}\sum_{\substack{Q_v\in Votes\: of\: Q_i\\ Q_v \leq T(Q_i)+24}}Q_v  +\sum_{A_i\in A}\sum_{\substack{A_v\in Votes\: of\: A_i\\ A_v \leq T(A_i)+24}}A_v + \sum_{AA_i\in AA}\sum_{\substack{AA_v\in Votes\: of\: AA_i\\ AA_v \leq T(AA_i)+24}}AA_v}{\sum_{Q_i\in Q}Q_i}\right]}
+  \end{tabular}
+\end{table*}
