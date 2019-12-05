@@ -39,7 +39,7 @@ We can say that the closed issue ratio means how much problems have been solved.
 From Table~\ref{table:Issue ratio}, we can say Swift has a very active development team with the closed issue ratio close to one. Maybe that is why the question frequency for Swift is smoother than the other two languages.
 \fi
 
-Based on the release date of new languages, we have defined two states for languages (1) Evolving state: the language has just been released, it lacks experts and other resources in Stack Overflow, and (2) Matured State: the language has a stable release with a support community. We divided the age (release date to 2017) into two halves and marked the first half as evolving state and second half as the matured state. Table~\ref{table:States of languages} presents the duration of these states for new languages.
+{\color{blue}Based on the stable date point of new languages presented in section \ref{RQ1}, we have defined two states for languages (1) Evolving state: the language has just been released, it lacks experts and other resources in Stack Overflow, and (2) Matured State: the language has a stable release with a support community. Table~\ref{table:States of languages} presents the duration of these states for new languages.
 \begin{table}
 %\resizebox{\textwidth}{!}{%
 \caption{Duration of the evolving and matured state of new languages}
@@ -47,9 +47,9 @@ Based on the release date of new languages, we have defined two states for langu
 \hline
  Language & Evolving State& Matured State \\ \hline
 % Swift & 01/09/14-30/04/16 & 01/05/16-31/12/17  \\ \hline
- Swift & September 2014-April 2016 & May 2016-December 2017  \\ \hline
- Rust & January 2012-December 2014 & January 2015-December 2017 \\ \hline
- Go & April 2012-February 2015 & March 2015-December 2017 \\ \hline
+ Swift & September 2014-September 2016 & October 2016-December 2017  \\ \hline
+ Rust & N/A & N/A \\ \hline
+ Go & March 2012-April 2015 & March 2015-December 2017 \\ \hline
 \end{tabular}%
 %}
 \label{table:States of languages}
@@ -64,14 +64,15 @@ We performed the Mann-Whitney U test for each language to establish the conjectu
 \begin{tabular}{|l|l|}
 \hline
  Language & p value \\ \hline
- Swift & 0.94  \\ \hline
- Rust & \textless 0.01 \\ \hline
+ Swift & 0.01  \\ \hline
+ Rust & N/A \\ \hline
  Go &   \textless 0.01 \\ \hline
 \end{tabular}%
 \label{table:Mann-Whitney Test answer interval between states}
 \end{table}
 
-From the Mann-Whitney test result presented in Table~\ref{table:Mann-Whitney Test answer interval between states}, we have found that only the Rust and Go languages reject the null hypothesis which means that the difference is significant for Rust and Go languages while it is insignificant for Swift language. According to the release date, Swift is the youngest of these three languages. As a result, when the age is equally divided, it received a small period as evolving state. Even, it may not have reached the matured state yet. On another note, Swift is the direct descendent of Objective-C, and it inherits many libraries and community support from Objective-C. Hence, it may not have an evolving state and started its evolution direct from the matured state. Either of these can be the reason behind the null hypothesis support for Swift.
+From the Mann-Whitney test result presented in Table~\ref{table:Mann-Whitney Test answer interval between states}, we have found that only the Swift and Go languages reject the null hypothesis which means that the difference is significant for Swift and Go languages.}
+% According to the release date, Swift is the youngest of these three languages. As a result, when the age is equally divided, it received a small period as evolving state. Even, it may not have reached the matured state yet. On another note, Swift is the direct descendent of Objective-C, and it inherits many libraries and community support from Objective-C. Hence, it may not have an evolving state and started its evolution direct from the matured state. Either of these can be the reason behind the null hypothesis support for Swift.
 
 With the process of evolution, it is expected that the number of unanswered questions will be decreased. To verify this conjecture, we have calculated the unanswered-question ratio for each month. By unanswered question ratio, we mean the ratio of the questions without any answer. We have defined the unanswered question ratio as,
 
