@@ -1,6 +1,17 @@
 \subsection{RQ3: Relation between the advancement of new languages and its developers' activity}
-\label{RQ2}
-Being the most used QA site Stack Overflow provides us an insight into the developers' activity pattern. We can get the activity pattern of the developers' of a new programming language from the question-answer frequency of that language. High developers' activity helps to expose special cases and rare bugs of a project. Developers use the issue to inform the language owners about these problems or a particular case. The solution to these problems and bugs led to the growth of the language. Hence, we expect a  relationship between issue and developer's activity pattern. Moreover, developers' activity can also be observed from the number of users, repositories of that language from GitHub. To measure the relationship among variables we have performed the following steps.
+\label{RQ3}
+Being the most used QA site Stack Overflow provides us an insight into the developers' activity pattern. \textcolor{green}{The most common developers' activities in SO \citep{Badashian2014} are,
+\begin{enumerate}
+    \item \textbf{Questions:} Developers ask development-related questions. Questions might be moderated based on clarity and duplicity.
+    \item \textbf{Answers:}  Developers answer questions about their field of expertise.
+    \item \textbf{Comment:} Users can comment on other users' questions and answers.
+    \item \textbf{Up Votes:} Developers can vote to increase the score of other users' questions or answers.
+    \item \textbf{Down Votes:} Developers can cast votes to decrease the score of other users' questions or answers.
+    \item \textbf{Question View:} Users can view other users' questions. ( SO does not keep this count with a timestamp).
+    \item \textbf{Answer View:} Users can view other users' answers. ( SO does not keep this count with a timestamp).
+\end{enumerate}}
+We can get the activity pattern of the developers' of a new programming language from the question-answer frequency of that language. High developers' activity helps to expose special cases and rare bugs of a project. Developers use the issue to inform the language owners about these problems or a particular case. The solution to these problems and bugs led to the growth of the language. Hence, we expect a  relationship between issue and developer's activity pattern. Moreover, developers' activity can also be observed from the number of users, repositories of that language from GitHub. \textcolor{green}{Table ~\ref{table:model parameters} summarizes the descriptions of and rationales behind the studied factors.} To measure the relationship among variables we have performed the following steps.
+\input{Tables/Model_parameters}
 \begin{enumerate}
     \item Model Construction (MC)
     \item Model Analysis (MA)
@@ -58,9 +69,9 @@ Developers use an issue to ask owners about a new feature and seeking help about
 \end{enumerate}
 From the adjusted $R^2$ value of Table~\ref{table:github_question relationship}, it is clear that there is a strong relationship between developers' GitHub activity and the number of open issue in the official repository of that respective language. 
 
-\boxtext{\textbf{Finding 4:} There is a relationship between developers' activity pattern and growth of the language.}
+\boxtext{\textbf{Finding 4:} There is a relationship between developers' activity pattern and the growth of the language.}
 
-\boxtext{\textbf{Finding 5:} The number of open issues of Rust in GitHub significantly influenced the number of question on Rust in Stack Overflow.}
+\boxtext{\textbf{Finding 5:} The number of open issues of Rust in GitHub significantly influenced the number of questions on Rust in Stack Overflow.}
 
 \boxtext{\textbf{Finding 6:} The open issue count of Swift and Rust is highly dependent on the number of repositories of that language in GitHub.}
 

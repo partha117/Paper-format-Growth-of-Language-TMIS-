@@ -1,0 +1,44 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{longtable}{|l|l|l|}
+% \begin{tabular}{|l|l|l|}
+\hline
+Language              & Topic name & Top LDA words  \\ \hline
+\multirow{6}{*}{Go}   & Problem in using library           & \textit{\begin{tabular}[c]{@{}l@{}}hql, gorm, mgo, grail,  dgo, beego,\\ hikari, error\_handling, groovy\end{tabular}}\\\cline{2-3}
+
+                      & Serving request                    & \textit{\begin{tabular}[c]{@{}l@{}}grpc, server, ip\_address,\\request, testing, protocol,\\ socket, unmarshal, encryption\end{tabular}}\\\cline{2-3}
+                      
+                      & Go channel                         &  \textit{\begin{tabular}[c]{@{}l@{}}testing,
+                      channel, mutex, thread,\\ http, syntax, lock, goroutine,\\ concurrency\end{tabular}} \\\cline{2-3}
+                      
+                      & Compilation problem                & \textit{\begin{tabular}[c]{@{}l@{}}gcompiler, go\_build, dwarf, cgo,\\ signed, flags, goreleaser, gocache, CI \end{tabular}}\\\cline{2-3}
+                      
+                      & Memory                             &   \textit{\begin{tabular}[c]{@{}l@{}}slice, memory\_allocation, network, io,\\ buffer, marshall, memory\_leak, pointer,\\ allocation\end{tabular}}\\\cline{2-3}
+                      
+                      & Migration Problem                  & \textit{\begin{tabular}[c]{@{}l@{}}data\_structure, server\_tech, language\_ equivalent,\\ compiler, syntax, clang integration,\\ convert, client\_communication, cgo\end{tabular}} \\\hline
+\multirow{6}{*}{Rust} & Use of Struct        & \textit{\begin{tabular}[c]{@{}l@{}}syntax, lifetime,                                type\_conversion, algorithm,\\ clone, enclosed, filter, reference,\\                                           initialize\end{tabular}}\\\cline{2-3}
+
+                      & Mutability           &  \textit{\begin{tabular}[c]{@{}l@{}}mutability, dref, scope,\\ moved\_value, closure, immutable,\\ FnMut\end{tabular}}\\\cline{2-3} 
+                      
+                      & Parallel execution   &  \textit{\begin{tabular}[c]{@{}l@{}}threads, sync, channel, rayon,\\ thread\_join, prelude, sequential, faster\end{tabular}}\\\cline{2-3}
+                      
+                      & Borrow mechanism     & \textit{\begin{tabular}[c]{@{}l@{}}borrow, frozen\_variable, ref, lifetime,\\ shadow, overlap, move, reuse, access\end{tabular}}\\\cline{2-3}
+                      
+                      & Use of Trait         & \textit{\begin{tabular}[c]{@{}l@{}}trait, static, dynamic, pointer,\\ polymorphism, unbox, generic, concrete,\\ conflict \end{tabular}}\\\cline{2-3}             
+                      & Migration problem    & \textit{\begin{tabular}[c]{@{}l@{}}equivalent, compiler, syntax, jni,\\ extern, convert, pass, FFI,\\ wrap \end{tabular}}               \\\hline
+\multirow{6}{*}{Swift}& UI                           &\textit{\begin{tabular}[c]{@{}l@{}}Ui,                                       view\_controller, animation,\\ layout, swiftUI, segue, graphics,\\ sprite, scene\_kit                           \end{tabular}}\\\cline{2-3}
+
+                      & View Controller lifecycle    &\textit{\begin{tabular}[c]{@{}l@{}}hooks, cg\_size, appear,\\ disappear, will\_appear, deinit,\\ view, timer, dynamic \end{tabular}}\\\cline{2-3}
+                      
+                      & Mutability                   &\textit{\begin{tabular}[c]{@{}l@{}}collection, mutation, struct, let,\\ reference, mutable, modify, pointer,\\ unsafe\end{tabular}}\\\cline{2-3}
+                      
+                      & Data Handling                &\textit{\begin{tabular}[c]{@{}l@{}}database, json, parsing, persistence,\\ keychain, coredata, types, optional,\\ nested\end{tabular}}\\\cline{2-3}
+                      
+                      & Migration problem            &\textit{\begin{tabular}[c]{@{}l@{}}nullability, header, sub\_class,\\ swiftify , bridging, equivalence, object\_conversion,\\ protocol, dependency\end{tabular}}\\\cline{2-3}
+                      
+                      & Documentation clarification  &\textit{\begin{tabular}[c]{@{}l@{}}syntax, documentation, pragma\_mark,\\ xcode, comments, sdk, reference,\\ tutorial, apple-documentation\end{tabular}}\\\hline
+
+         
+% \end{tabular}
+\caption{Topics discovered by LDA}
+\end{longtable}

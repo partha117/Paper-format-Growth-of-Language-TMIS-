@@ -1,7 +1,7 @@
-\documentclass[acmsmall]{acmart}
+\documentclass[acmsmall,table,xcdraw]{acmart}
 
 
-
+\usepackage{xcolor}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -13,13 +13,14 @@
 \usepackage{graphicx}
 \usepackage{mathtools,cuted}
 \usepackage{tablefootnote}
-\usepackage{xcolor}
+% \usepackage{xcolor}
 \usepackage{lipsum}
 \usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{longfbox}
 \usepackage{makecell}
 \usepackage{longtable}
+
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \newcommand{\topicquote}[1]{\\ \hspace*{2em}\emph{``#1"}}
@@ -102,5 +103,9 @@ New programming languages (e.g., Swift, Go, Rust, etc.) are being introduced to 
 \section{Tags of new languages}
 \label{appendix:tagrelevance}
 \input{Tables/TagRelevance}
+
+\section{Topic listings}
+\label{appendix:LDA topic}
+\input{Tables/LDA_topic}
     
 \end{document}
